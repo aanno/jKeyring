@@ -70,7 +70,7 @@ public class GnomeProvider implements IKeyring {
             }
         }
         if (!envVarSet) {
-            return false;
+            // return false;
         }
         String appName = "jkeyring";
         try {
