@@ -26,10 +26,6 @@ import javax.swing.JButton;
 import javax.swing.JPanel;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
-import org.openide.DialogDisplayer;
-import org.openide.NotificationLineSupport;
-import org.openide.NotifyDescriptor;
-import org.openide.util.NbBundle;
 
 class MasterPasswordPanel extends JPanel {
 

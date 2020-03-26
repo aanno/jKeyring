@@ -32,12 +32,6 @@ import org.netbeans.api.keyring.Keyring;
 import org.netbeans.modules.keyring.utils.Utils;
 import org.netbeans.modules.keyring.spi.EncryptionProvider;
 import org.netbeans.spi.keyring.KeyringProvider;
-import org.openide.DialogDisplayer;
-import org.openide.NotifyDescriptor;
-import org.openide.util.Lookup;
-import org.openide.util.NbBundle;
-import org.openide.util.NbPreferences;
-import org.openide.util.lookup.ServiceProvider;
 
 /**
  * Platform-independent keyring provider using a master password and the user directory.

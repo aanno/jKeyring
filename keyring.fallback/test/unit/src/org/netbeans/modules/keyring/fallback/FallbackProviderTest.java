@@ -21,12 +21,7 @@ package org.netbeans.modules.keyring.fallback;
 
 import java.awt.Dialog;
 import java.util.concurrent.Callable;
-import org.netbeans.junit.MockServices;
-import org.netbeans.junit.NbTestCase;
 import org.netbeans.modules.keyring.spi.EncryptionProvider;
-import org.openide.DialogDescriptor;
-import org.openide.DialogDisplayer;
-import org.openide.NotifyDescriptor;
 
 public class FallbackProviderTest extends NbTestCase {
 

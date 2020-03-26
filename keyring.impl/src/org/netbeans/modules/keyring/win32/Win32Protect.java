@@ -32,8 +32,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.netbeans.modules.keyring.utils.Utils;
 import org.netbeans.modules.keyring.spi.EncryptionProvider;
-import org.openide.util.Utilities;
-import org.openide.util.lookup.ServiceProvider;
 
 /**
  * Data protection utility for Microsoft Windows.

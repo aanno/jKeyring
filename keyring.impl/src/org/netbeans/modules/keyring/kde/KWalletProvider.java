@@ -19,7 +19,6 @@
 package org.netbeans.modules.keyring.kde;
 
 import org.netbeans.spi.keyring.KeyringProvider;
-import org.openide.util.lookup.ServiceProvider;
 
 // #256606
 @ServiceProvider(service = KeyringProvider.class, position = 99)

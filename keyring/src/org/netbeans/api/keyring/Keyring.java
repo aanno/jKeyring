@@ -30,17 +30,7 @@ import java.util.concurrent.TimeoutException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
-import org.netbeans.api.annotations.common.CheckForNull;
-import org.netbeans.api.annotations.common.NonNull;
-import org.netbeans.api.annotations.common.NullAllowed;
-import org.netbeans.api.progress.ProgressHandle;
-import org.netbeans.api.progress.ProgressUtils;
 import org.netbeans.spi.keyring.KeyringProvider;
-import org.openide.util.Cancellable;
-import org.openide.util.Lookup;
-import org.openide.util.NbBundle;
-import org.openide.util.Parameters;
-import org.openide.util.RequestProcessor;
 
 /**
  * Client class for working with stored keys (such as passwords).

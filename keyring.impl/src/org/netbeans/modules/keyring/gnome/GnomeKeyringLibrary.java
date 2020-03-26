@@ -31,7 +31,6 @@ import com.sun.jna.TypeConverter;
 import java.io.File;
 import java.util.Collections;
 import java.util.Map;
-import org.netbeans.api.annotations.common.SuppressWarnings;
 
 /**
  * JNA wrapper for certain functions from GNOME Keyring API.

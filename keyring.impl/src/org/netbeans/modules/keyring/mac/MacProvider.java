@@ -24,8 +24,6 @@ import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import org.netbeans.spi.keyring.KeyringProvider;
-import org.openide.util.Utilities;
-import org.openide.util.lookup.ServiceProvider;
 
 @ServiceProvider(service=KeyringProvider.class, position=200)
 public class MacProvider implements KeyringProvider {
