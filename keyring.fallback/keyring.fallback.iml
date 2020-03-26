@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="public-package-jars" level="project" />
+    <orderEntry type="library" name="modules5" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="module" module-name="test184" />
+    <orderEntry type="module" module-name="test366" />
+    <orderEntry type="module" module-name="perf1" />
+    <orderEntry type="module" module-name="test258" />
+    <orderEntry type="module" module-name="openide.compat" />
+    <orderEntry type="module" module-name="openide.modules" />
+    <orderEntry type="module" module-name="test211" />
+    <orderEntry type="module" module-name="keyring" />
+    <orderEntry type="module" module-name="openide.util.lookup" />
+    <orderEntry type="module" module-name="openide.dialogs" />
+    <orderEntry type="module" module-name="openide.util" />
+    <orderEntry type="module" module-name="build77" />
+    <orderEntry type="module" module-name="test354" />
+    <orderEntry type="module" module-name="build11" />
+    <orderEntry type="module" module-name="o.n.swing.tabcontrol" />
+    <orderEntry type="module" module-name="openide.util.ui" />
+    <orderEntry type="module" module-name="test221" />
+  </component>
+</module>
