@@ -46,6 +46,7 @@ package jkeyring;
 
 import java.security.KeyStoreException;
 
+@SuppressWarnings("serial")
 public class KeyringException extends KeyStoreException {
     public KeyringException() {
 	super();

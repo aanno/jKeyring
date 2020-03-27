@@ -19,6 +19,8 @@
 
 package org.netbeans.spi.keyring;
 
+import org.atteo.classindex.IndexSubclasses;
+
 /**
  * Provider for a keyring.
  * Should be registered in global lookup.
@@ -28,6 +30,8 @@ package org.netbeans.spi.keyring;
  * which should always be enabled.
  * <p>All SPI calls are made from one thread at a time, so providers need not be synchronized.
  */
+@IndexSubclasses
+@KeyringProviderAnnotation
 public interface KeyringProvider {
 
     /**

@@ -117,7 +117,7 @@ public class DPAPIEncryption implements IEncryptionProvider {
     public void freshKeyring(boolean fresh) {}
 
     public interface CryptLib extends StdCallLibrary {
-        CryptLib INSTANCE = (CryptLib) Native.loadLibrary("Crypt32", CryptLib.class); // NOI18N
+        CryptLib INSTANCE = Native.loadLibrary("Crypt32", CryptLib.class); // NOI18N
         /** @see <a href="http://msdn.microsoft.com/en-us/library/aa380261(VS.85,printer).aspx">Reference</a> */
         boolean CryptProtectData(
                 CryptIntegerBlob pDataIn,

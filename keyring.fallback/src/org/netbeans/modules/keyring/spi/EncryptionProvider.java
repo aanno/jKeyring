@@ -20,6 +20,8 @@
 package org.netbeans.modules.keyring.spi;
 
 import java.util.concurrent.Callable;
+
+import org.atteo.classindex.IndexSubclasses;
 import org.netbeans.spi.keyring.KeyringProvider;
 
 /**
@@ -31,6 +33,8 @@ import org.netbeans.spi.keyring.KeyringProvider;
  * in global lookup which claims to be enabled will be used;
  * a standard implementation exists (at position 1000) which uses a simple master password.
  */
+@IndexSubclasses
+@EncryptionProviderAnnotation
 public interface EncryptionProvider {
 
     /**
