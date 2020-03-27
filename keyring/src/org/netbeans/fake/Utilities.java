@@ -1,5 +1,7 @@
 package org.netbeans.fake;
 
+import org.openide.util.BaseUtilities;
+
 public final class Utilities {
 
     private Utilities() {
@@ -7,19 +9,14 @@ public final class Utilities {
     }
 
     public static boolean isWindows() {
-        // TODO tp: implement
-        throw new UnsupportedOperationException();
-        // return false;
+        return BaseUtilities.isWindows();
     }
 
     public static boolean isMac() {
-        // TODO tp: implement
-        throw new UnsupportedOperationException();
-        // return false;
+        return BaseUtilities.isMac();
     }
 
-    public static boolean isLinux() {
-        // TODO tp: implement
-        return true;
+    public static boolean isUnix() {
+        return BaseUtilities.isUnix();
     }
 }
