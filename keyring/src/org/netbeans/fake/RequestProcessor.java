@@ -7,6 +7,7 @@ import java.util.concurrent.Future;
 
 public class RequestProcessor {
 
+    // TODO tp: better implementation
     private static final ExecutorService EXECUTOR_SERVICE =
             Executors.newFixedThreadPool(4);
 
@@ -17,9 +18,6 @@ public class RequestProcessor {
     }
 
     public void post(Runnable runnable) {
-        // TODO tp: better implementation
-        // Thread thread = new Thread(runnable, "RequestProcessor:" + clazz.getSimpleName());
-        // thread.start();
         EXECUTOR_SERVICE.submit(runnable);
     }
 

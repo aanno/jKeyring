@@ -144,6 +144,7 @@ public class MasterPasswordEncryption implements EncryptionProvider {
         }
         // TODO tp: new implementation
         char[][] passwords = null;
+        if (true) throw new UnsupportedOperationException();
         /*
         char[][] passwords = Mutex.EVENT.readAccess(new Mutex.Action<char[][]>() {
             public @Override char[][] run() {

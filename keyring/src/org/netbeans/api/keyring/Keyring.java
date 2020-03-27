@@ -113,6 +113,7 @@ public class Keyring {
                         return result.get(SAFE_DELAY, TimeUnit.MILLISECONDS);
                     } catch (TimeoutException ex) {
                         // TODO tp: fixme
+                        throw new UnsupportedOperationException();
                         // show progress dialog
                         /*
                         return ProgressUtils.showProgressDialogAndRun(

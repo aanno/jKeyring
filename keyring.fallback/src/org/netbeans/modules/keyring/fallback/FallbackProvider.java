@@ -108,6 +108,7 @@ public class FallbackProvider implements KeyringProvider, Callable<Void> {
     private boolean promptToDelete(Preferences prefs) {
         // TODO tp: new implementation
         Object result = null;
+        if (true) throw new UnsupportedOperationException();
         /*
         Object result = DialogDisplayer.getDefault().notify(new NotifyDescriptor.Confirmation(
                 NbBundle.getMessage(FallbackProvider.class, "FallbackProvider.msg_clear_keys"),

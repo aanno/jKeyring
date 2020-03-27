@@ -8,12 +8,14 @@ public final class Utilities {
 
     public static boolean isWindows() {
         // TODO tp: implement
-        return false;
+        throw new UnsupportedOperationException();
+        // return false;
     }
 
     public static boolean isMac() {
         // TODO tp: implement
-        return false;
+        throw new UnsupportedOperationException();
+        // return false;
     }
 
     public static boolean isLinux() {
