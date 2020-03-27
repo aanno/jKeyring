@@ -18,6 +18,7 @@
  */
 package org.netbeans.modules.keyring.kde;
 
+import org.netbeans.fake.ServiceProvider;
 import org.netbeans.spi.keyring.KeyringProvider;
 
 // #256606

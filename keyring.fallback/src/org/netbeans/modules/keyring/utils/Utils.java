@@ -19,6 +19,8 @@
 
 package org.netbeans.modules.keyring.utils;
 
+import org.netbeans.fake.Places;
+
 import java.io.File;
 import java.util.logging.Level;
 import java.util.logging.Logger;

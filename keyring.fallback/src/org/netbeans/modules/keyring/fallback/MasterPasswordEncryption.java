@@ -35,6 +35,7 @@ import javax.crypto.SecretKeyFactory;
 import javax.crypto.spec.PBEKeySpec;
 import javax.crypto.spec.PBEParameterSpec;
 import org.netbeans.api.keyring.Keyring;
+import org.netbeans.fake.ServiceProvider;
 import org.netbeans.modules.keyring.utils.Utils;
 import org.netbeans.modules.keyring.spi.EncryptionProvider;
 

@@ -23,6 +23,9 @@ import com.sun.jna.Pointer;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+
+import org.netbeans.fake.ServiceProvider;
+import org.netbeans.fake.Utilities;
 import org.netbeans.spi.keyring.KeyringProvider;
 
 @ServiceProvider(service=KeyringProvider.class, position=200)

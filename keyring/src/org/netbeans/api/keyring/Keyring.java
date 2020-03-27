@@ -30,6 +30,14 @@ import java.util.concurrent.TimeoutException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.SwingUtilities;
+
+import org.netbeans.fake.Cancellable;
+import org.netbeans.fake.Lookup;
+import org.netbeans.fake.Parameters;
+import org.netbeans.fake.ProgressHandle;
+import org.netbeans.fake.ProgressRunnable;
+import org.netbeans.fake.ProgressUtils;
+import org.netbeans.fake.RequestProcessor;
 import org.netbeans.spi.keyring.KeyringProvider;
 
 /**
@@ -83,8 +91,8 @@ public class Keyring {
      * @param key the identifier of the key
      * @return its value if found (you may null out its elements), else null if not present
      */
-    @NbBundle.Messages("MSG_KeyringAccess=Requesting keyring access")
-    @CheckForNull
+    // @NbBundle.Messages("MSG_KeyringAccess=Requesting keyring access")
+    // @CheckForNull
     public static char[] read(@NonNull final String key) {
         Parameters.notNull("key", key);
 
@@ -216,7 +224,7 @@ public class Keyring {
         return result;
     }
 
-    private static class ProgressRunnable<T> implements org.netbeans.api.progress.ProgressRunnable<T>, Cancellable {
+    private static class ProgressRunnable<T> implements org.netbeans.fake.ProgressRunnable<T>, Cancellable {
 
         private final Future<? extends T> task;
 

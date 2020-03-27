@@ -25,6 +25,8 @@ import java.util.MissingResourceException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import static org.netbeans.modules.keyring.gnome.GnomeKeyringLibrary.*;
+
+import org.netbeans.fake.ServiceProvider;
 import org.netbeans.spi.keyring.KeyringProvider;
 
 @ServiceProvider(service=KeyringProvider.class, position=100)

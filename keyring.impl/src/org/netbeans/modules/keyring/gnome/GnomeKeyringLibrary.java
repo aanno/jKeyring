@@ -28,6 +28,8 @@ import com.sun.jna.Structure;
 import com.sun.jna.Structure.FieldOrder;
 import com.sun.jna.ToNativeContext;
 import com.sun.jna.TypeConverter;
+import org.netbeans.fake.FieldOrder;
+
 import java.io.File;
 import java.util.Collections;
 import java.util.Map;

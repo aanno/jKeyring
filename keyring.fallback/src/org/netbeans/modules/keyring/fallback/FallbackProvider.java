@@ -29,6 +29,8 @@ import java.util.logging.Logger;
 import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 import org.netbeans.api.keyring.Keyring;
+import org.netbeans.fake.Lookup;
+import org.netbeans.fake.ServiceProvider;
 import org.netbeans.modules.keyring.utils.Utils;
 import org.netbeans.modules.keyring.spi.EncryptionProvider;
 import org.netbeans.spi.keyring.KeyringProvider;
