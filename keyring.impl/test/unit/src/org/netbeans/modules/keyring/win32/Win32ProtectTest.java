@@ -19,13 +19,15 @@
 
 package org.netbeans.modules.keyring.win32;
 
-import org.netbeans.junit.NbTestCase;
+import static org.junit.jupiter.api.Assertions.*;
 
-public class Win32ProtectTest extends NbTestCase {
+public class Win32ProtectTest {
 
+    /*
     public Win32ProtectTest(String n) {
         super(n);
     }
+     */
 
     public void testEncryption() throws Exception {
         Win32Protect p = new Win32Protect();

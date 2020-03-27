@@ -23,6 +23,7 @@ import java.security.SecureRandom;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.ResourceBundle;
 import java.util.concurrent.Callable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -30,6 +31,8 @@ import java.util.prefs.BackingStoreException;
 import java.util.prefs.Preferences;
 import org.netbeans.api.keyring.Keyring;
 import org.netbeans.fake.Lookup;
+import org.netbeans.fake.NbBundle;
+import org.netbeans.fake.NbPreferences;
 import org.netbeans.fake.ServiceProvider;
 import org.netbeans.modules.keyring.utils.Utils;
 import org.netbeans.modules.keyring.spi.EncryptionProvider;
@@ -103,11 +106,15 @@ public class FallbackProvider implements KeyringProvider, Callable<Void> {
     }
 
     private boolean promptToDelete(Preferences prefs) {
+        // TODO tp: new implementation
+        Object result = null;
+        /*
         Object result = DialogDisplayer.getDefault().notify(new NotifyDescriptor.Confirmation(
                 NbBundle.getMessage(FallbackProvider.class, "FallbackProvider.msg_clear_keys"),
                 NbBundle.getMessage(FallbackProvider.class, "FallbackProvider.title_clear_keys"),
                 NotifyDescriptor.OK_CANCEL_OPTION));
-        if (result == NotifyDescriptor.OK_OPTION) {
+                */
+        if (result == Long.valueOf(1)/* NotifyDescriptor.OK_OPTION */) {
             try {
                 LOG.log(Level.FINE, "agreed to delete stored passwords: {0}", Arrays.asList(prefs.keys()));
                 prefs.clear();

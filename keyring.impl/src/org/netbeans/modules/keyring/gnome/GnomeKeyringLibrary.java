@@ -25,10 +25,8 @@ import com.sun.jna.Library;
 import com.sun.jna.Native;
 import com.sun.jna.Pointer;
 import com.sun.jna.Structure;
-import com.sun.jna.Structure.FieldOrder;
 import com.sun.jna.ToNativeContext;
 import com.sun.jna.TypeConverter;
-import org.netbeans.fake.FieldOrder;
 
 import java.io.File;
 import java.util.Collections;
@@ -117,7 +115,7 @@ public interface GnomeKeyringLibrary extends Library {
             /*GList<GnomeKeyringFound>*/Pointer found_list);
 
     @java.lang.SuppressWarnings("PublicField")
-    @FieldOrder({"keyring", "item_id", "attributes", "secret"})
+    @Structure.FieldOrder({"keyring", "item_id", "attributes", "secret"})
     class GnomeKeyringFound extends Structure {
         public String keyring;
         public int item_id;

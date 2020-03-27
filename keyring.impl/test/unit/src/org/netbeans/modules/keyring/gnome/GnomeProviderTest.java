@@ -24,9 +24,11 @@ import org.netbeans.spi.keyring.KeyringProvider;
 
 public class GnomeProviderTest extends KeyringProviderTestBase {
 
+    /*
     public GnomeProviderTest(String n) {
         super(n);
     }
+     */
 
     protected KeyringProvider createProvider() {
         return new GnomeProvider();

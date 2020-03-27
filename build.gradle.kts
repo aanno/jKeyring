@@ -22,11 +22,19 @@ repositories {
     mavenCentral()
 }
 
-sourceSets.create("modules") {
+sourceSets.getByName("main") {
     java {
+        srcDir("src/main/java")
         srcDir("keyring/src")
         srcDir("keyring.fallback/src")
         srcDir("keyring.impl/src")
+    }
+}
+sourceSets.getByName("test") {
+    java {
+        srcDir("src/test/java")
+        srcDir("keyring.fallback/test/unit/src")
+        srcDir("keyring.impl/test/unit/src")
     }
 }
 
@@ -38,7 +46,7 @@ dependencies {
     runtimeOnly("org.slf4j", "slf4j-jdk14", "1.7.0")
 
     // implementation("net.java.dev.jna", "jna", "5.5.0")
-    implementation("net.java.dev.jna", "jna", "4.5.2")
+    implementation("net.java.dev.jna", "jna", "5.5.0")
     // implementation("net.java.dev.jna", "jna-platform", "5.5.0")
 
     // needed to find service provider
@@ -50,6 +58,7 @@ dependencies {
 
     // JUnit 5
     testImplementation("org.junit.jupiter", "junit-jupiter-api", "5.3.1")
+    testImplementation("org.mockito", "mockito-core", "3.3.3")
     testRuntimeOnly("org.junit.jupiter", "junit-jupiter-engine", "5.3.1")
     testRuntimeOnly("org.junit.platform", "junit-platform-console", "1.6.0")
 

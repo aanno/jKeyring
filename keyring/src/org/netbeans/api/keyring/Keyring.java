@@ -29,6 +29,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.annotation.Nonnull;
+import javax.annotation.Nullable;
 import javax.swing.SwingUtilities;
 
 import org.netbeans.fake.Cancellable;
@@ -93,7 +95,7 @@ public class Keyring {
      */
     // @NbBundle.Messages("MSG_KeyringAccess=Requesting keyring access")
     // @CheckForNull
-    public static char[] read(@NonNull final String key) {
+    public static char[] read(@Nonnull final String key) {
         Parameters.notNull("key", key);
 
         try {
@@ -110,9 +112,12 @@ public class Keyring {
                         // lets wait in awt to avoid flashing dialogs
                         return result.get(SAFE_DELAY, TimeUnit.MILLISECONDS);
                     } catch (TimeoutException ex) {
+                        // TODO tp: fixme
                         // show progress dialog
+                        /*
                         return ProgressUtils.showProgressDialogAndRun(
                                 new ProgressRunnable<char[]>(result), Bundle.MSG_KeyringAccess(), false);
+                                */
                     }
                 }
             }
@@ -146,8 +151,8 @@ public class Keyring {
      *                 (its contents will be nulled out by end of call)
      * @param description a user-visible description of the key (may be null)
      */
-    public static void save(@NonNull final String key, @NonNull final char[] password,
-            @NullAllowed final String description) {
+    public static void save(@Nonnull final String key, @Nonnull final char[] password,
+            @Nullable final String description) {
 
         Parameters.notNull("key", key);
         Parameters.notNull("password", password);
@@ -177,7 +182,7 @@ public class Keyring {
      *
      * @param key a key identifier
      */
-    public static void delete(@NonNull final String key) {
+    public static void delete(@Nonnull final String key) {
         Parameters.notNull("key", key);
 
         KEYRING_ACCESS.post(new Runnable() {

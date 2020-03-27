@@ -20,17 +20,23 @@
 package org.netbeans.modules.keyring;
 
 import java.security.SecureRandom;
-import org.netbeans.junit.NbTestCase;
+
+import org.junit.jupiter.api.Test;
 import org.netbeans.spi.keyring.KeyringProvider;
 
-public abstract class KeyringProviderTestBase extends NbTestCase {
+import static org.junit.jupiter.api.Assertions.*;
 
+public abstract class KeyringProviderTestBase {
+
+    /*
     protected KeyringProviderTestBase(String n) {
         super(n);
     }
+     */
 
     protected abstract KeyringProvider createProvider();
 
+    @Test
     public void testStorage() throws Exception {
         KeyringProvider p = createProvider();
         if (!p.enabled()) {

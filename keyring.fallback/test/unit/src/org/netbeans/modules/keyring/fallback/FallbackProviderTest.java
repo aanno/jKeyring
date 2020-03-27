@@ -21,19 +21,26 @@ package org.netbeans.modules.keyring.fallback;
 
 import java.awt.Dialog;
 import java.util.concurrent.Callable;
+
+import org.junit.jupiter.api.Test;
 import org.netbeans.modules.keyring.spi.EncryptionProvider;
 
-public class FallbackProviderTest extends NbTestCase {
+import static org.junit.jupiter.api.Assertions.*;
 
+public class FallbackProviderTest {
+
+    /*
     public FallbackProviderTest(String name) {
         super(name);
     }
+     */
 
     // #197205: if Win32Protect.encrypt fails with NTE_BAD_KEY_STATE, we must skip this provider.
+    @Test
     public void testFreshSampleKeyEncryptionFails() throws Exception {
         System.setProperty("netbeans.keyring.no.native", "true");
         System.setProperty("netbeans.keyring.no.master", "true");
-        MockServices.setServices(BrokenProvider.class, DoNotPrompt.class);
+        // MockServices.setServices(BrokenProvider.class, DoNotPrompt.class);
         assertFalse(new FallbackProvider().enabled());
     }
 
@@ -58,6 +65,7 @@ public class FallbackProviderTest extends NbTestCase {
         public @Override void freshKeyring(boolean fresh) {}
     }
 
+    /*
     public static class DoNotPrompt extends DialogDisplayer {
         public @Override Object notify(NotifyDescriptor descriptor) {
             throw new AssertionError();
@@ -66,5 +74,6 @@ public class FallbackProviderTest extends NbTestCase {
             throw new AssertionError();
         }
     }
+     */
 
 }

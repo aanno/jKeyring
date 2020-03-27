@@ -28,9 +28,11 @@ import org.netbeans.spi.keyring.KeyringProvider;
  */
 public class KWalletProviderTest extends KeyringProviderTestBase {
 
+    /*
     public KWalletProviderTest(String n) {
         super(n);
     }
+     */
 
     @Override
     protected KeyringProvider createProvider() {

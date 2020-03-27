@@ -24,9 +24,11 @@ import org.netbeans.spi.keyring.KeyringProvider;
 
 public class MacProviderTest extends KeyringProviderTestBase {
 
+    /*
     public MacProviderTest(String n) {
         super(n);
     }
+     */
 
     protected KeyringProvider createProvider() {
         return new MacProvider();

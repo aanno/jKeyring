@@ -26,6 +26,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import static org.netbeans.modules.keyring.gnome.GnomeKeyringLibrary.*;
 
+import org.netbeans.fake.NbBundle;
 import org.netbeans.fake.ServiceProvider;
 import org.netbeans.spi.keyring.KeyringProvider;
 

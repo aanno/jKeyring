@@ -31,7 +31,6 @@ import java.util.concurrent.Callable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import org.netbeans.fake.FieldOrder;
 import org.netbeans.fake.ServiceProvider;
 import org.netbeans.fake.Utilities;
 import org.netbeans.modules.keyring.utils.Utils;

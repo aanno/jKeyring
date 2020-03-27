@@ -21,12 +21,13 @@ package org.netbeans.modules.keyring.fallback;
 
 import java.awt.GraphicsEnvironment;
 import java.util.logging.Level;
-import junit.framework.Test;
-import junit.framework.TestSuite;
-import org.netbeans.junit.NbTestCase;
+import org.junit.jupiter.api.Test;
 
-public class MasterPasswordEncryptionTest extends NbTestCase {
+import static org.junit.jupiter.api.Assertions.*;
 
+public class MasterPasswordEncryptionTest {
+
+    /*
     public static Test suite() {
         return GraphicsEnvironment.isHeadless() ? new TestSuite() : new TestSuite(MasterPasswordEncryptionTest.class);
     }
@@ -38,7 +39,9 @@ public class MasterPasswordEncryptionTest extends NbTestCase {
     @Override protected Level logLevel() {
         return Level.FINE;
     }
+     */
 
+    @Test
     public void testEncryption() throws Exception {
         doTestEncryption("Top Secret!", "my password");
         doTestEncryption("some extra secret pass phrase", "something pretty long here for whatever reason...");
@@ -52,7 +55,8 @@ public class MasterPasswordEncryptionTest extends NbTestCase {
             doTestEncryption("muj heslo", Character.toString(c));
         }
     }
-    
+
+    @Test
     private void doTestEncryption(String masterPassword, String password) throws Exception {
         MasterPasswordEncryption p = new MasterPasswordEncryption();
         assertTrue(p.enabled());
@@ -60,6 +64,7 @@ public class MasterPasswordEncryptionTest extends NbTestCase {
         assertEquals(password, new String(p.decrypt(p.encrypt(password.toCharArray()))));
     }
 
+    @Test
     public void testWrongPassword() throws Exception {
         MasterPasswordEncryption p = new MasterPasswordEncryption();
         assertTrue(p.enabled());
@@ -72,7 +77,7 @@ public class MasterPasswordEncryptionTest extends NbTestCase {
         } catch (Exception x) {
             // expected: "BadPaddingException: Given final block not properly padded"
         }
-        assertFalse("should not be able to decrypt with incorrect password", new String(result).equals("secret"));
+        assertFalse(new String(result).equals("secret"), "should not be able to decrypt with incorrect password");
     }
 
 }
